@@ -12,3 +12,16 @@ x <- 10
 y <- 20
 sum <- x + y
 print(sum) # This line will print the value of 'sum'
+
+
+# R program to create a List
+
+empId = c(1, 2, 3, 4)
+
+empName = c("Debi", "Sandeep", "Subham", "Shiba")
+
+numberOfEmp = 4
+
+empList = list(empId, empName, numberOfEmp)
+
+print(empList)
