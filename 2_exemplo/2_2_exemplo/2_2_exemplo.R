@@ -54,3 +54,55 @@ density_plot <- ggplot() +
 
 print(density_plot)
 
+#Exemplo
+library(ggplot2)
+
+data <- data.frame(categories = c("Mango", "Apple", "Orange"),
+                   values = c(520, 358, 405))
+pie_chart <- ggplot(data, aes(x = "", y = values, fill = categories)) + 
+  geom_bar(width = 1, stat = "identity") + 
+  coord_polar("y", start = 0) + 
+  labs(title = "Sybudheen Shop", x = "Fruits", y = "total") + 
+  theme_void()
+pie_chart
+
+
+#Exemplo
+
+# creating data frame
+fruits <- c(rep("Apple", 3), rep("Mango", 3),
+            rep("Banana", 3), rep("Orange", 3))
+quantity <- sample.int(50, 12)
+
+Shop <- rep(c('A', 'B', 'C'),4)
+
+data <- data.frame(fruits, Shop, quantity)
+
+# plotting graph
+ggplot(data, aes(fill = Shop, y = quantity, x = fruits))+
+  geom_bar(position = "stack", stat = "identity")+
+  ggtitle("Different fruit sells in different shops")+
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+#Exemplo
+trains <- c(10, 20, 30, 40, 50, 34, 23, 49, 21, 13)
+passengers <- c(100, 200, 300, 400, 500, 
+                229, 346, 432, 198, 235)
+
+plot(trains, passengers,
+     xlab = "Number of Trains", 
+     ylab = "Number of Passengers", 
+     main = "Scatter Plot of Trains vs Passengers")
+abline(lm(passengers~trains), col = "red")
+
+
+#Exemplo
+x <- rnorm(2000)
+hist(x, main = "Frequency Plot", 
+     xlab = "Values", 
+     ylab = "Frequency", 
+     col = "gray",
+     border = "black")
+
+
