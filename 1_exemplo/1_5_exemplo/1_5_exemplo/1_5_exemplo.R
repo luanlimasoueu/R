@@ -59,3 +59,25 @@ a <- function(){
   z 
 } 
 a() 
+
+
+
+#Exemplo
+g <- function() x^3
+x <- 10
+g()  
+
+
+#Exemplo
+aGlobal <- rnorm(10) 
+bGlobal <- rnorm(10) 
+
+f <- function() 
+{  
+  a <- aGlobal 
+  b <- bGlobal 
+  plot(b ~ a) 
+} 
+codetools::findGlobals(f) 
+
+
