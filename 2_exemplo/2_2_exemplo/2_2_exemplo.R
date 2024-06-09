@@ -106,3 +106,37 @@ hist(x, main = "Frequency Plot",
      border = "black")
 
 
+#Exemplo
+library(ggplot2)
+library(dplyr)
+data(AirPassengers)
+ts_data <- as.data.frame(AirPassengers)
+ts_data$date <- time(AirPassengers)
+ggplot(ts_data, aes(x = date, y = AirPassengers)) +
+  geom_line() +
+  xlab("Year") +
+  ylab("Passengers") +
+  ggtitle("Air Passengers")
+library(forecast)
+ts_decomposed <- decompose(AirPassengers)
+ts_decomposed_df <- as.data.frame(ts_decomposed)
+ggplot(ts_decomposed_df, aes(x = index(ts_decomposed_df$trend),
+                             y = ts_decomposed_df$trend)) +
+  geom_line() +
+  xlab("Year") +
+  ylab("Trend") +
+  ggtitle("Trend Component")
+ggplot(ts_decomposed_df, aes(x = index(ts_decomposed_df$seasonal), 
+                             y = ts_decomposed_df$seasonal)) +
+  geom_line() +
+  xlab("Year") +
+  ylab("Seasonality") +
+  ggtitle("Seasonality Component")
+ggplot(ts_decomposed_df, aes(x = index(ts_decomposed_df$random), 
+                             y = ts_decomposed_df$random)) +
+  geom_line() +
+  xlab("Year") +
+  ylab("Residuals") +
+  ggtitle("Residual Component")
+
+
