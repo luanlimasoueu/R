@@ -76,6 +76,15 @@ dados_cliente <- list(
 
 dados_cliente 
 
+as.data.frame(dados_cliente)
+
+
+mtcars[,1]
+
+mtcars[1,]
+
+
+
 
 
 
