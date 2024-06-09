@@ -84,6 +84,34 @@ mtcars[,1]
 mtcars[1,]
 
 
+c(1, 3, 5)
+
+sum(1, 3)
+
+sum(c(1, 3))
+
+mean(1, 3)
+
+mean(c(1, 3))
+
+seq(from = 4, to = 10, by = 2)
+
+seq(4, 10, 2)
+
+
+minha_soma <- function(x, y) {
+  soma <- x + y
+  
+  soma  # resultado retornado
+}
+
+minha_soma(2, 2)
+
+
+
+
+
+
 
 
 
