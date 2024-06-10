@@ -135,6 +135,30 @@ for (coluna in 1:numero_de_colunas) {
 }
 
 
+#Exemplo
+numero_de_colunas <- ncol(mtcars)
+
+# Antes, criamos um vetor vazio.
+medias <- c()
+
+for (coluna in 1:numero_de_colunas) {
+  medias[coluna] <- mean(mtcars[,coluna])
+}
+
+medias
+
+
+#Exemplo
+i <- 1
+
+while (i < 3){
+  print(i)
+  i <-  i + 1
+}
+
+
+
+
 
 
 
