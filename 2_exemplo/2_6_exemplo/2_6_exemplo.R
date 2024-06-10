@@ -65,7 +65,7 @@ imdb %>%
   geom_point(aes(x = ano, y = nota_media))
 
 imdb %>% 
-  filter(direcao == "Steven Spielberg") %>% 
+  filter(diretor == "Steven Spielberg") %>% 
   group_by(ano) %>% 
   summarise(nota_media = mean(nota_imdb, na.rm = TRUE)) %>% 
   ggplot(aes(x = ano, y = nota_media)) +
