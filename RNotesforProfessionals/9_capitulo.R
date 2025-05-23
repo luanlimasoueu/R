@@ -15,3 +15,8 @@ exampleList2 <- list(1, 2)
 exampleList3 <- list('a', 1, 2)
 
 exampleList1
+
+str(exampleList1)
+str(exampleList2)
+str(exampleList3)
+
