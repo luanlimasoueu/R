@@ -16,21 +16,48 @@ data <- read.table(header=T, text='
        4   M   11
  ')
 
-data
-
 data[1,3]
-
-data[1,"size"]
 
 data[1:2, ] 
 
 data[c(1,2), ]
 
-subset(data, subject < 3)
+data[1:2, 2]
+
+data[c(1,2), 2]
+
+data[1:2, c("sex","size")]
+
+data[c(1,2), c(2,3)]
+
+
+v > 2
+
+v[v>2]
+
+v[ c(F,T,T,T,F,F,T)]
+
+
+data$subject < 3
 
 data[data$subject < 3, ]
 
-subset(data, subject < 3, select = -subject)
+data[c(TRUE,TRUE,FALSE,FALSE), ]
+
+which(data$subject < 3)
+
+v
+
+v[-1]
+
+v[-1:-3]
+
+v[-length(v)]
+
+
+
+
+
 
 
 
