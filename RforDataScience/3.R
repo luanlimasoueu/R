@@ -15,4 +15,30 @@ flights
 flights |> 
   filter(dep_delay > 120)
 
-glimpse(flights)
+flights |> 
+  filter(month == 1 & day == 1)
+
+flights |> 
+  filter(month == 1 | month == 2)
+
+flights |> 
+  filter(month %in% c(1, 2))
+
+jan1 <- flights |> 
+  filter(month == 1 & day == 1)
+
+flights |> 
+  filter(month = 1)
+
+flights |> 
+  arrange(year, month, day, dep_time)
+
+flights |> 
+  arrange(desc(dep_delay))
+
+flights |> 
+  distinct()
+
+
+
+
